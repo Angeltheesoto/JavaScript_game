@@ -5,13 +5,42 @@
  box-sizing: border-box;
 }
 
+:root {
+ --title-color: #775119;
+ --primary-color: #eee;
+}
 
+body {
+ background-image: url(./images/woods-with-dirtpath.jpeg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ background-position: center;
+}
 
+.game-title {
+ text-align: center;
+ padding-top: 10rem;
+ font-size: 10rem;
+ font-weight: 900;
+ color: var(--title-color);
+ -webkit-text-stroke: 1px black;
+ text-decoration: underline;
+}
 
+.btn-container {
+ display: flex;
+ border: 1px solid red;
+ width: 30rem;
+ height: 30rem;
+ margin: 0 auto;
+}
 
+.box {
+ width: 100%;
+ background-color: var(--primary-color);
 
-
-
+}
 
 
 

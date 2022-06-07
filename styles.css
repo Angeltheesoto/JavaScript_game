@@ -136,9 +136,11 @@ button:hover {
 }
 
 
+/* Class with = display: none; */
 
-
-
+.none {
+  display: none;
+}
 
 
 

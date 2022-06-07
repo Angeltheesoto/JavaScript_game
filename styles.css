@@ -1,3 +1,12 @@
+/* general styling */
+
+/* how to use these styling properties */
+/* font-family: 'Amatic SC',
+cursive;
+font-family: 'Roboto',
+sans-serif;
+font-family: 'Shadows Into Light',
+cursive; */
 
 * {
  margin: 0;
@@ -8,6 +17,7 @@
 :root {
  --title-color: #775119;
  --primary-color: #eee;
+ --secondary-color: #1e1e1e;
 }
 
 body {
@@ -18,36 +28,112 @@ body {
  background-position: center;
 }
 
+
+/* title styling */
+
 .game-title {
  text-align: center;
- padding-top: 10rem;
+ padding-top: 5rem;
  font-size: 10rem;
  font-weight: 900;
- color: var(--title-color);
- -webkit-text-stroke: 1px black;
- text-decoration: underline;
+ color: var(--secondary-color);
+ /* text-decoration: underline; */
+ font-family: 'Amatic SC',
+  cursive;
+  margin-bottom: 4rem;
 }
+
+hr {
+ width: 25%;
+ margin: 0 auto;
+ height: 1rem;
+ background-color: var(--secondary-color);
+ border: none;
+ border-radius: 10px;
+}
+
+
+/* question styling */
+
+.question-container {
+ width: 50rem;
+ height: auto;
+ margin: 2rem auto;
+ border-radius: 10px;
+ border-bottom: 2px solid var(--primary-color);border-top: 2px solid var(--primary-color);
+}
+
+.question {
+ text-align: center;
+ margin: 1rem;
+ color: var(--primary-color);
+ word-break: break-all;
+ font-family: 'Roboto',
+   sans-serif;
+}
+
+.btn-yes {
+ margin-left: 40%;
+}
+
+button {
+ margin: 0 1rem 1rem 0;
+ padding: 10px 1rem;
+ border-radius: 10px;
+ border: none;
+}
+
+button:hover {
+ opacity: .8;
+ cursor: pointer;
+}
+
+
+/* choices styling */
 
 .btn-container {
  display: flex;
- border: 1px solid red;
- width: 30rem;
- height: 30rem;
- margin: 0 auto;
+ min-width: 50rem;
+ margin: 0 2rem;
+ border-radius: 10px;
+ /* border: 1px solid red; */
 }
 
 .box {
- width: 100%;
+ width: 25%;
  background-color: var(--primary-color);
+ margin: 10px;
+ padding: 10px;
+ border-radius: 10px;
+ word-break: break-all;
+ font-family: 'Shadows Into Light',
+   cursive;
+   color: var(--secondary-color);
+   font-size: 20px;
+}
 
+.box:hover {
+ opacity: .8;
+ cursor: pointer;
 }
 
 
+/* Audio button */
 
+.toggle {
+ float: right;
+ margin: 1rem 1rem 0 0;
+ padding: 1rem;
+ font-size: 2rem;
+ text-decoration: none;
+ color: var(--secondary-color-color);
+ background-color: var(--primary-color);
+ border-radius: 10px;
+}
 
-
-
-
+.toggle:hover {
+ opacity: .8;
+}
 
 
 

@@ -30,13 +30,16 @@ const noBtn = document.getElementById('btn-no');
      setTimeout(() => {
      question.innerText = `In 2..`;
       setTimeout(() => {
-      question.innerText = `In 1`;
+      question.innerText = `In 1..`;
        setTimeout(() => {
-       question.innerText = `Starting`;
-       }, 2000);
-     }, 2000);
-    }, 2000);
-   }, 2000);
+       question.innerText = `Good Luck!`;
+        setTimeout(() => {
+         theWoodsGame()
+        }, 2000);
+       }, 1000);
+     }, 1000);
+    }, 1000);
+   }, 1000);
  });
 
 noBtn.addEventListener('click', () => {
@@ -47,11 +50,21 @@ noBtn.addEventListener('click', () => {
  });
 
 
-// 
+// Create a function that runs all the if/else statements for the questions and routes the player can go for the game to try and make it out alive.
 
+const btnOne = document.getElementById('btn-one');
+const btnTwo = document.getElementById('btn-two');
+const btnThree = document.getElementById('btn-three');
+const btnfour = document.getElementById('btn-four');
 
+function theWoodsGame() {
 
+ // starter dialogue
+ question.innerText = `You and a friend are on a trip at one of the largest forest in the United States. Your hiking through the mountains of Tongrass National Forest, Alaska. Its been nothing but three fun filled days with hiking, camping and fishing in the great outdoors. You and your best-friend are miles away from any contact with civilization and your both tired and ready to head back home. You have enough supplies to last you at least two more days for the journey back. To head back your best-friend suggest a more adventurer route through the rocky river, pass the abonded yellow bus. There is also another shorter route on the map that a ranger had mentioned to you before the trip called the Moose path. Or also the Cove trail if your not afraid of animals.`
 
+ // if()
+
+}
 
 
 

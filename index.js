@@ -55,32 +55,81 @@ noBtn.addEventListener('click', () => {
 function theWoodsGame() {
 
  const btnOne = document.getElementById('btn-one');
-const btnTwo = document.getElementById('btn-two');
-const btnThree = document.getElementById('btn-three');
-const btnFour = document.getElementById('btn-four');
+ const btnTwo = document.getElementById('btn-two');
+ const btnThree = document.getElementById('btn-three');
+ const btnFour = document.getElementById('btn-four');
 
  // starter dialogue
  let newQuestion = question.innerText = `You and a friend are on a trip at one of the largest forest in the United States. Your hiking through the mountains of Tongrass National Forest, Alaska. Its been nothing but three fun filled days with hiking, camping and fishing in the great outdoors. You and your best-friend are miles away from any contact with civilization and your both tired and ready to head back home. You have enough supplies to last you at least two more days for the journey back. To head back your best-friend suggest a more adventurer route through the rocky river, pass the abonded yellow bus. There is also another shorter route on the map that a ranger had mentioned to you before the trip called the Moose path. Or also the Cove trail if your not afraid of animals.`;
 
   // When a button is clicked have the question change to a new question and four new answers appear.
+
+  let test = true;
+
  let answerOne = btnOne.innerText = `You decide to be a little bit more adventurest person on this trip and agree to go with your friend through the creek`;
  let answerTwo = btnTwo.innerHTML = `Answer two`;
  let answerThree = btnThree.innerHTML = `Answer three`;
  let answerFour = btnFour.innerHTML = `Answer four`;
-// click event listener - COMEBACK HERE !!!
+
+// click event listener - This doesnt work.
+ // function callbackClicked(callback) {
+ //  callback.addEventListener('click', (evt) => {
+ //   let target = evt.target;
+ //   console.log('clicked')
+ //   })
+ // }
+ //  if( callbackClicked(btnOne).id === 'btn-one') {
+ //   console.log('btn-one')
+ //   newQuestion.textContent = `New question.`;
+ //   answerOne.textContent = `New choice`;
+ //   answerTwo.textContent = `New choice`;
+ //   answerThree.textContent = `New choice`;
+ //   answerFour.textContent = `New choice`;
+ //  }
+
+  // This works!!!
  function callbackClicked(callback) {
-  callback.addEventListener('click', () => {
-   console.log('clicked')
+  callback.addEventListener('click', (evt) => {
+   let target = evt.target;
+
+    if(target.id === 'btn-one') {
+     console.log('Button one was pressed.');
+
+     question.innerHTML = `New question.`;
+     btnOne.innerHTML = `New choice one.`;
+     btnTwo.innerHTML = `New choice two.`;
+     btnThree.innerHTML = `New choice three.`;
+     btnFour.innerHTML = `New choice four.`;
+
+     // change the id back and forth eachtime its clicked.
+     setTimeout(() => {
+      btnOne.setAttribute('id', 'new-btn');
+     }, 1000);
+
+      if(target.id === 'new-btn' ) {
+       question.innerHTML = `Another New question.`;
+       btnOne.innerHTML = `Another New choice one.`;
+       btnTwo.innerHTML = `Another New choice two.`;
+       btnThree.innerHTML = `Another New choice three.`;
+       btnFour.innerHTML = `Another New choice four.`;
+      }
+
+    } else if (target.id === 'btn-two') {
+     console.log('Button two was pressed.')
+
+    } else if (target.id === 'btn-three') {
+     console.log('Button three was pressed.')
+
+    } else {
+     console.log('Button four was pressed.')
+
+    }
    })
  }
-
-  if( callbackClicked(btnOne) === `You decide to be a little bit more adventurest person on this trip and agree to go with your friend through the creek` ) {
-   newQuestion.textContent = `New question.`;
-   answerOne.textContent = `New choice`;
-   answerTwo.textContent = `New choice`;
-   answerThree.textContent = `New choice`;
-   answerFour.textContent = `New choice`;
-  }
+ callbackClicked(btnOne);
+ callbackClicked(btnTwo);
+ callbackClicked(btnThree);
+ callbackClicked(btnFour);
 };
 
 

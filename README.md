@@ -13,3 +13,7 @@ Some things I would like to have in my game -
 - Background images for each question and for the document itself
 - everytime a user clicks a button a sound effect goes off.
 - have the game end in either a win or loss based on the choices of the player.
+
+How to play -
+
+-

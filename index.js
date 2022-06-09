@@ -16,7 +16,6 @@ const yesBtn = document.getElementById('btn-yes');
 const noBtn = document.getElementById('btn-no');
 
  yesBtn.addEventListener('click', () => {
-  console.log('Yes')
   question.innerText = `Your game will begin shortly...`;
 
   noBtn.classList.add('none')
@@ -40,123 +39,101 @@ const noBtn = document.getElementById('btn-no');
  });
 
 noBtn.addEventListener('click', () => {
-  console.log('No')
   question.innerText = `Maybe next time.`;
   noBtn.classList.add('none')
   yesBtn.classList.add('none')
  });
 
- // NEW CODE - create a list of objects to call back on for each choice. MY VARIABLES -
+ // These are my questions for every option -
  let newQuestions = [{
-  'q1': 'question one',
-  'q2': 'question two',
-  'q3': 'question three',
-  'q4': 'question four'
+  // path of Questions for ONE - IF YOU KEEP PRESSING ONE.
+  "level 11":{'q1': 'question q1-one', 'child': 1},
+  "level 12":{'q2': 'question q1-two', 'child': 2},
+  "level 13":{'q3': 'question q1-three', 'child': 3},
+  "level 14":{'q4': 'question q1-four', 'child': 4}
  }]
 
+ let newQuestionsTwo = [{
+  // path of Questions for TWO - IF YOU KEEP PRESSING TWO.
+  "level 11":{'q1': 'question q2-one', 'child': 1},
+  "level 12":{'q2': 'question q2-two', 'child': 2},
+  "level 13":{'q3': 'question q2-three', 'child': 3},
+  "level 14":{'q4': 'question q2-four', 'child': 4}
+ }]
+ // These are my questions for every option -
+
+ // These are my choices for every question -
  let newChoices = [
-  // choices for question one - 1
+  // path of choices for ONE - IF YOU KEEP PRESSING ONE.
  {
   'level 11': {'c1': 'choice q1-one', 'child': 1},
   'level 12': {'c2': 'choice q1-two', 'child': 2},
   'level 13': {'c3': 'choice q1-three', 'child': 3},
   'level 14': {'c4': 'choice q1-four', 'child':4}
  },
- //  Q-ONE CHOICES IF C1 IS CHOSEN
  {
   'level 11': {'c1': 'choice q1-c1-one', 'child': 5},
   'level 12': {'c2': 'choice q1-c1-two', 'child': 6},
   'level 13': {'c3': 'choice q1-c1-three', 'child': 7},
   'level 14': {'c4': 'choice q1-c1-four', 'child': 8}
+ },
+ {
+  'level 11':{'c1': 'choice q1-c2-one', 'child': 9},
+  'level 12':{'c2': 'choice q1-c2-two', 'child': 10},
+  'level 13':{'c3': 'choice q1-c2-three', 'child': 11},
+  'level 14':{'c4': 'choice q1-c2-four', 'child': 12}
  }
- //  Q-ONE CHOICES IF C2 IS CHOSEN
- // {
- //  'c1': 'choice q1-c2-one',
- //  'c2': 'choice q1-c2-two',
- //  'c3': 'choice q1-c2-three',
- //  'c4': 'choice q1-c2-four'
- // },
- // //  Q-ONE CHOICES IF C3 IS CHOSEN
- // {
- //  'c1': 'choice q1-c3-one',
- //  'c2': 'choice q1-c3-two',
- //  'c3': 'choice q1-c3-three',
- //  'c4': 'choice q1-c3-four'
- // },
- // //  Q-ONE CHOICES IF C4 IS CHOSEN
- // {
- //  'c1': 'choice q1-c4-one',
- //  'c2': 'choice q1-c4-two',
- //  'c3': 'choice q1-c4-three',
- //  'c4': 'choice q1-c4-four'
- // },
-
- //  // choices for question two - 2
- // {
- //  'c1': 'choice q2-one',
- //  'c2': 'choice q2-two',
- //  'c3': 'choice q2-three',
- //  'c4': 'choice q2-four'
- // },
- // //  Q-TWO CHOICES IF C1 IS CHOSEN
- // {
- //  'c1': 'choice q2-c1-one',
- //  'c2': 'choice q2-c1-two',
- //  'c3': 'choice q2-c1-three',
- //  'c4': 'choice q2-c1-four'
- // },
- // //  Q-TWO CHOICES IF C2 IS CHOSEN
- // {
- //  'c1': 'choice q2-c2-one',
- //  'c2': 'choice q2-c2-two',
- //  'c3': 'choice q2-c2-three',
- //  'c4': 'choice q2-c2-four'
- // },
- // //  Q-TWO CHOICES IF C3 IS CHOSEN
- // {
- //  'c1': 'choice q2-c3-one',
- //  'c2': 'choice q2-c3-two',
- //  'c3': 'choice q2-c3-three',
- //  'c4': 'choice q2-c3-four'
- // },
- // //  Q-TWO CHOICES IF C4 IS CHOSEN
- // {
- //  'c1': 'choice q2-c4-one',
- //  'c2': 'choice q2-c4-two',
- //  'c3': 'choice q2-c4-three',
- //  'c4': 'choice q2-c4-four'
- // },
  ];
 
+ let newChoicesTwo = [
+  // path of choices for TWO - IF YOU KEEP PRESSING TWO.
+ {
+  'level 11': {'c1': 'choice q2-one', 'child': 1},
+  'level 12': {'c2': 'choice q2-two', 'child': 2},
+  'level 13': {'c3': 'choice q2-three', 'child': 3},
+  'level 14': {'c4': 'choice q2-four', 'child':4}
+ },
+ {
+  'level 11': {'c1': 'choice q2-c2-one', 'child': 5},
+  'level 12': {'c2': 'choice q2-c2-two', 'child': 6},
+  'level 13': {'c3': 'choice q2-c2-three', 'child': 7},
+  'level 14': {'c4': 'choice q2-c2-four', 'child': 8}
+ },
+ {
+  'level 11':{'c1': 'choice q2-c3-one', 'child': 9},
+  'level 12':{'c2': 'choice q2-c3-two', 'child': 10},
+  'level 13':{'c3': 'choice q2-c3-three', 'child': 11},
+  'level 14':{'c4': 'choice q2-c3-four', 'child': 12}
+ }
+ ]
+ // These are my choices for every question -
+ 
+ // My function that runs all the questions and choices. -
  let level = 0;
-
-// Create a function that runs all the if/else statements for the questions and routes the player can go for the game to try and make it out alive.
-function theWoodsGame() {
-
+ function theWoodsGame() {
+  // buttons -
  const btnOne = document.getElementById('btn-one');
  const btnTwo = document.getElementById('btn-two');
  const btnThree = document.getElementById('btn-three');
  const btnFour = document.getElementById('btn-four');
+  // button elements -
 
- // NEW CODE - create a list of objects to call back on for each choice.
+ // Starter question and choices- IT STARTS HERE ->
+  question.innerHTML = newQuestions[0]['level 11'].q1;
+  btnOne.innerHTML = newChoices[0]["level 11"].c1;
+  btnTwo.innerHTML = newChoices[0]["level 12"].c2;
+  btnThree.innerHTML = newChoices[0]["level 13"].c3;
+  btnFour.innerHTML = newChoices[0]["level 14"].c4;
 
-  question.innerHTML = newQuestions[0].q1;
-  btnOne.innerHTML = newChoices[0].c1;
-  btnTwo.innerHTML = newChoices[0].c2;
-  btnThree.innerHTML = newChoices[0].c3;
-  btnFour.innerHTML = newChoices[0].c4;
-
- function callbackClicked(element) {
-  console.log('hello');
-  // Find out we are at level 0. Find child level, current button
+  // if button one is chosen ----->
+ function callbackClicked() {
   let currentNode = newChoices[level];
-  let currentChild = currentNode[`level 11`];
+  let currentChild = currentNode['level 11'];
   let childIndex = currentChild['child'];
   populateChildren(childIndex);
  }
-
- // populate children
  function populateChildren(start) {
+  // question.innerHTML = newQuestions[start]['level 11']['q1'];
   btnOne.innerHTML = newChoices[start]['level 11']['c1'];
   btnTwo.innerHTML = newChoices[start]['level 12']['c2'];
   btnThree.innerHTML = newChoices[start]['level 13']['c3'];
@@ -164,76 +141,31 @@ function theWoodsGame() {
   console.log(newChoices[start]['level 11'])
   level += start;
  }
-
  btnOne.addEventListener('click', (event) => {
   callbackClicked(event);
  })
 
+//  If button two is chosen ----->
+//  function callbackClickedTwo(element) {
+//   let currentNode = newChoicesTwo[level];
+//   let currentChild = currentNode[`level 12`];
+//   let childIndex = currentChild['child'];
+//   populateChildrenTwo(childIndex);
+//  }
+//  function populateChildrenTwo(start) {
 
-
-
-
-
-
- //  element.addEventListener('click', (evt) => {
- //   let target = evt.target;
-
- //    if(question.innerHTML === newQuestions[0].q1) {
- //     console.log('Button one was pressed.');
- //     question.innerHTML = newQuestions[0].q2;
- //     btnOne.innerHTML = newChoices[1].c1;
- //     btnTwo.innerHTML = newChoices[1].c2;
- //     btnThree.innerHTML = newChoices[1].c3;
- //     btnFour.innerHTML = newChoices[1].c4;
-
- //      if(question.innerHTML === newQuestions[0].q2) {
- //        question.innerHTML = newQuestions[0].q3;
- //        btnOne.innerHTML = newChoices[2].c1;
- //        btnTwo.innerHTML = newChoices[2].c2;
- //        btnThree.innerHTML = newChoices[2].c3;
- //        btnFour.innerHTML = newChoices[2].c4;
-
- //         if(question.innerHTML === newQuestions[0].q3) {
- //          question.innerHTML = newQuestions[0].q3;
- //          btnOne.innerHTML = newChoices[3].c1;
- //          btnTwo.innerHTML = newChoices[3].c2;
- //          btnThree.innerHTML = newChoices[3].c3;
- //          btnFour.innerHTML = newChoices[3].c4;
- //         } 
- //      } 
- //      // else if(question.innerHTML === newQuestions[0].q2 && ) {
- //      //   question.innerHTML = newQuestions[0].q4;
- //      //   btnOne.innerHTML = newChoices[3].c1;
- //      //   btnTwo.innerHTML = newChoices[3].c2;
- //      //   btnThree.innerHTML = newChoices[3].c3;
- //      //   btnFour.innerHTML = newChoices[3].c4;
- //      // }
-
- //    } else if (target.id === 'btn-two') {
- //     console.log('Button two was pressed.')
-
- //    } else if (target.id === 'btn-three') {
- //     console.log('Button three was pressed.')
-
- //    } else {
- //     console.log('Button four was pressed.')
-
- //    }
- //   }
- //  )
- // }
- // callbackClicked(btnOne);
- // callbackClicked(btnTwo);
- // callbackClicked(btnThree);
- // callbackClicked(btnFour);
+//   btnOne.innerHTML = newChoicesTwo[start]['level 11']['c1'];
+//   btnTwo.innerHTML = newChoicesTwo[start]['level 12']['c2'];
+//   btnThree.innerHTML = newChoicesTwo[start]['level 13']['c3'];
+//   btnFour.innerHTML = newChoicesTwo[start]['level 14']['c4'];
+//   // console.log(newChoicesTwo[start]['level 11'])
+//   level += start;
+//  }
+//  btnTwo.addEventListener('click', (event) => {
+//   callbackClickedTwo(event);
+//  })
+ // My function that runs all the questions and choices. -
 };
-
-
-
-
-
-
-
 
 
 

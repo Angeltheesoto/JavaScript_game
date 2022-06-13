@@ -44,25 +44,22 @@ noBtn.addEventListener('click', () => {
   yesBtn.classList.add('none')
  });
 
- // These are my questions for every option -
+ // This is my starter question -
  let newQuestions = [{
-  // path of Questions for ONE - IF YOU KEEP PRESSING ONE.
-  "level 11":{'c1': 'question q1-one', 'level': 1},
-  "level 12":{'c2': 'question q1-two', 'level': 2},
-  "level 13":{'c3': 'question q1-three', 'level': 3},
-  "level 14":{'c4': 'question q1-four', 'level': 4}
+  "level 11":{'c1': 'question q1-one', 'level': 1}
  }]
 
  // These are my choices for every question -
  let newChoices = [
  {
-  'level 11': {'c1': 'choice q1-one', 'level': 1},
+
+  'level 11': {'c1': 'choice q1-one', 'level': 1, 'question': 'question-two'},
   'level 12': {'c2': 'choice q1-two', 'level': 2},
   'level 13': {'c3': 'choice q1-three', 'level': 3},
   'level 14': {'c4': 'choice q1-four', 'level':4}
  },
  {
-  'level 11': {'c1': 'choice q1-c1-one', 'level': 5},
+  'level 11': {'c1': 'choice q1-c1-one', 'level': 5, 'question': 'question-two'},
   'level 12': {'c2': 'choice q1-c1-two', 'level': 6},
   'level 13': {'c3': 'choice q1-c1-three', 'level': 7},
   'level 14': {'c4': 'choice q1-c1-four', 'level': 8}
@@ -73,7 +70,7 @@ noBtn.addEventListener('click', () => {
   'level 13':{'c3': 'choice q1-c2-three', 'level': 11},
   'level 14':{'c4': 'choice q1-c2-four', 'level': 12}
  },
- {level
+ {
   'level 11':{'c1': 'choice q1-c3-one', 'level': 13},
   'level 12':{'c2': 'choice q1-c3-two', 'level': 14},
   'level 13':{'c3': 'choice q1-c3-three', 'level': 15},
@@ -118,20 +115,21 @@ noBtn.addEventListener('click', () => {
 
   //  ----->
  function callbackClicked(element) {
+  // console.log('calling call back clicked for level' + level);
   let currentNode = newChoices[level];
+  // console.log('break');
   let currentChild = currentNode['level 11'];
   let childIndex = currentChild['level'];
   populateChildren(childIndex);
  }
 //  
  function populateChildren(start) {
-  // question.innerHTML = newQuestions[start]['level 11']['c1'];
+  console.log('starting children at index' + start);
+  question.innerHTML = newChoices[start]['level 11']['question'];
   btnOne.innerHTML = newChoices[start]['level 11']['c1'];
   btnTwo.innerHTML = newChoices[start]['level 12']['c2'];
   btnThree.innerHTML = newChoices[start]['level 13']['c3'];
   btnFour.innerHTML = newChoices[start]['level 14']['c4'];
-  console.log(newChoices[start]['level 11'])
-  console.log(newQuestions[start]['level 11'])
   level = start;
  }
 //  Event listener.

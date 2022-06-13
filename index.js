@@ -2,7 +2,7 @@
 // Toggle background audio
 let audio = document.getElementById('background-audio');
 
-document.getElementById('mute').addEventListener('click', function (e)
+document.getElementById('mute').addEventListener('click', (e) =>
 {
  e = e || window.event;
  audio.muted = !audio.muted;
@@ -47,66 +47,57 @@ noBtn.addEventListener('click', () => {
  // These are my questions for every option -
  let newQuestions = [{
   // path of Questions for ONE - IF YOU KEEP PRESSING ONE.
-  "level 11":{'q1': 'question q1-one', 'child': 1},
-  "level 12":{'q2': 'question q1-two', 'child': 2},
-  "level 13":{'q3': 'question q1-three', 'child': 3},
-  "level 14":{'q4': 'question q1-four', 'child': 4}
+  "level 11":{'c1': 'question q1-one', 'level': 1},
+  "level 12":{'c2': 'question q1-two', 'level': 2},
+  "level 13":{'c3': 'question q1-three', 'level': 3},
+  "level 14":{'c4': 'question q1-four', 'level': 4}
  }]
-
- let newQuestionsTwo = [{
-  // path of Questions for TWO - IF YOU KEEP PRESSING TWO.
-  "level 11":{'q1': 'question q2-one', 'child': 1},
-  "level 12":{'q2': 'question q2-two', 'child': 2},
-  "level 13":{'q3': 'question q2-three', 'child': 3},
-  "level 14":{'q4': 'question q2-four', 'child': 4}
- }]
- // These are my questions for every option -
 
  // These are my choices for every question -
  let newChoices = [
-  // path of choices for ONE - IF YOU KEEP PRESSING ONE.
  {
-  'level 11': {'c1': 'choice q1-one', 'child': 1},
-  'level 12': {'c2': 'choice q1-two', 'child': 2},
-  'level 13': {'c3': 'choice q1-three', 'child': 3},
-  'level 14': {'c4': 'choice q1-four', 'child':4}
+  'level 11': {'c1': 'choice q1-one', 'level': 1},
+  'level 12': {'c2': 'choice q1-two', 'level': 2},
+  'level 13': {'c3': 'choice q1-three', 'level': 3},
+  'level 14': {'c4': 'choice q1-four', 'level':4}
  },
  {
-  'level 11': {'c1': 'choice q1-c1-one', 'child': 5},
-  'level 12': {'c2': 'choice q1-c1-two', 'child': 6},
-  'level 13': {'c3': 'choice q1-c1-three', 'child': 7},
-  'level 14': {'c4': 'choice q1-c1-four', 'child': 8}
+  'level 11': {'c1': 'choice q1-c1-one', 'level': 5},
+  'level 12': {'c2': 'choice q1-c1-two', 'level': 6},
+  'level 13': {'c3': 'choice q1-c1-three', 'level': 7},
+  'level 14': {'c4': 'choice q1-c1-four', 'level': 8}
  },
  {
-  'level 11':{'c1': 'choice q1-c2-one', 'child': 9},
-  'level 12':{'c2': 'choice q1-c2-two', 'child': 10},
-  'level 13':{'c3': 'choice q1-c2-three', 'child': 11},
-  'level 14':{'c4': 'choice q1-c2-four', 'child': 12}
+  'level 11':{'c1': 'choice q1-c2-one', 'level': 9},
+  'level 12':{'c2': 'choice q1-c2-two', 'level': 10},
+  'level 13':{'c3': 'choice q1-c2-three', 'level': 11},
+  'level 14':{'c4': 'choice q1-c2-four', 'level': 12}
+ },
+ {level
+  'level 11':{'c1': 'choice q1-c3-one', 'level': 9},
+  'level 12':{'c2': 'choice q1-c3-two', 'level': 10},
+  'level 13':{'c3': 'choice q1-c3-three', 'level': 11},
+  'level 14':{'c4': 'choice q1-c3-four', 'level': 12}
+ },
+ {
+  'level 11':{'c1': 'choice q1-c4-one', 'level': 9},
+  'level 12':{'c2': 'choice q1-c4-two', 'level': 10},
+  'level 13':{'c3': 'choice q1-c4-three', 'level': 11},
+  'level 14':{'c4': 'choice q1-c4-four', 'level': 12}
+ },
+ {
+  'level 11':{'c1': 'choice q1-c5-one', 'level': 9},
+  'level 12':{'c2': 'choice q1-c5-two', 'level': 10},
+  'level 13':{'c3': 'choice q1-c5-three', 'level': 11},
+  'level 14':{'c4': 'choice q1-c5-four', 'level': 12}
+ },
+ {
+  'level 11':{'c1': 'choice q1-c6-one', 'level': 9},
+  'level 12':{'c2': 'choice q1-c6-two', 'level': 10},
+  'level 13':{'c3': 'choice q1-c6-three', 'level': 11},
+  'level 14':{'c4': 'choice q1-c6-four', 'level': 12}
  }
  ];
-
- let newChoicesTwo = [
-  // path of choices for TWO - IF YOU KEEP PRESSING TWO.
- {
-  'level 11': {'c1': 'choice q2-one', 'child': 1},
-  'level 12': {'c2': 'choice q2-two', 'child': 2},
-  'level 13': {'c3': 'choice q2-three', 'child': 3},
-  'level 14': {'c4': 'choice q2-four', 'child':4}
- },
- {
-  'level 11': {'c1': 'choice q2-c2-one', 'child': 5},
-  'level 12': {'c2': 'choice q2-c2-two', 'child': 6},
-  'level 13': {'c3': 'choice q2-c2-three', 'child': 7},
-  'level 14': {'c4': 'choice q2-c2-four', 'child': 8}
- },
- {
-  'level 11':{'c1': 'choice q2-c3-one', 'child': 9},
-  'level 12':{'c2': 'choice q2-c3-two', 'child': 10},
-  'level 13':{'c3': 'choice q2-c3-three', 'child': 11},
-  'level 14':{'c4': 'choice q2-c3-four', 'child': 12}
- }
- ]
- // These are my choices for every question -
  
  // My function that runs all the questions and choices. -
  let level = 0;
@@ -119,28 +110,31 @@ noBtn.addEventListener('click', () => {
   // button elements -
 
  // Starter question and choices- IT STARTS HERE ->
-  question.innerHTML = newQuestions[0]['level 11'].q1;
+  question.innerHTML = newQuestions[0]['level 11'].c1;
   btnOne.innerHTML = newChoices[0]["level 11"].c1;
   btnTwo.innerHTML = newChoices[0]["level 12"].c2;
   btnThree.innerHTML = newChoices[0]["level 13"].c3;
   btnFour.innerHTML = newChoices[0]["level 14"].c4;
 
-  // if button one is chosen ----->
- function callbackClicked() {
+  //  ----->
+ function callbackClicked(element) {
   let currentNode = newChoices[level];
   let currentChild = currentNode['level 11'];
-  let childIndex = currentChild['child'];
+  let childIndex = currentChild['level'];
   populateChildren(childIndex);
  }
+//  
  function populateChildren(start) {
-  // question.innerHTML = newQuestions[start]['level 11']['q1'];
+  // question.innerHTML = newQuestions[start]['level 11']['c1'];
   btnOne.innerHTML = newChoices[start]['level 11']['c1'];
   btnTwo.innerHTML = newChoices[start]['level 12']['c2'];
   btnThree.innerHTML = newChoices[start]['level 13']['c3'];
   btnFour.innerHTML = newChoices[start]['level 14']['c4'];
   console.log(newChoices[start]['level 11'])
-  level += start;
+  console.log(newQuestions[start]['level 11'])
+  level = start;
  }
+//  Event listener.
  btnOne.addEventListener('click', (event) => {
   callbackClicked(event);
  })

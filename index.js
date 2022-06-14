@@ -46,60 +46,68 @@ noBtn.addEventListener('click', () => {
 
  // These are my choices for every question -
 let newChoices = [
+  // label = choice [index#-level#-button#] -
+  // questionLabel = question [path#-currentQuestion#] -
   {
-    'level 11': {'c1': 'choice q1-one', 'level': 1, 'question': 'starter question'},
-    'level 12': {'c2': 'choice q1-two', 'level': 2},
-    'level 13': {'c3': 'choice q1-three', 'level': 3},
-    'level 14': {'c4': 'choice q1-four', 'level':4}
+    'level 11': {'c1': 'choice 0-1-one', 'level': 1, 'question': 'starter question 0-0'},
+    'level 12': {'c2': 'choice 0-2-two', 'level': 2},
+    'level 13': {'c3': 'choice 0-3-three', 'level': 3},
+    'level 14': {'c4': 'choice 0-4-four', 'level':4}
   },
   {
-    'level 11': {'c1': 'choice 1-c1-one', 'level': 5, 'question': 'question 1-1'},
-    'level 12': {'c2': 'choice 2-c1-two', 'level': 6, 'question': 'question 2-1'},
-    'level 13': {'c3': 'choice 3-c1-three', 'level': 7, 'question': 'question 3-1'},
-    'level 14': {'c4': 'choice 4-c1-four', 'level': 8, 'question': 'question 4-1'}
+    'level 11': {'c1': 'choice 1-5-one', 'level': 5, 'question': 'question 1-1'},
+    'level 12': {'c2': 'choice 1-6-two', 'level': 6},
+    'level 13': {'c3': 'choice 1-7-three', 'level': 7},
+    'level 14': {'c4': 'choice 1-8-four', 'level': 8}
   },
   {
-    'level 11':{'c1': 'choice q1-c2-one', 'level': 9, 'question': 'question 5-1'},
-    'level 12':{'c2': 'choice q1-c2-two', 'level': 10},
-    'level 13':{'c3': 'choice q1-c2-three', 'level': 11},
-    'level 14':{'c4': 'choice q1-c2-four', 'level': 12}
+    'level 11':{'c1': 'choice 2-9-one', 'level': 9, 'question': 'question 2-1'},
+    'level 12':{'c2': 'choice 2-10-two', 'level': 10},
+    'level 13':{'c3': 'choice 2-11-three', 'level': 11},
+    'level 14':{'c4': 'choice 2-12-four', 'level': 12}
   },
   {
-    'level 11':{'c1': 'choice q1-c3-one', 'level': 13},
-    'level 12':{'c2': 'choice q1-c3-two', 'level': 14},
-    'level 13':{'c3': 'choice q1-c3-three', 'level': 15},
-    'level 14':{'c4': 'choice q1-c3-four', 'level': 16}
+    'level 11':{'c1': 'choice 3-13-one', 'level': 13, 'question': 'question 3-1'},
+    'level 12':{'c2': 'choice 3-14-two', 'level': 14},
+    'level 13':{'c3': 'choice 3-15-three', 'level': 15},
+    'level 14':{'c4': 'choice 3-16-four', 'level': 16}
   },
   {
-    'level 11':{'c1': 'choice q1-c4-one', 'level': 17},
-    'level 12':{'c2': 'choice q1-c4-two', 'level': 18},
-    'level 13':{'c3': 'choice q1-c4-three', 'level': 19},
-    'level 14':{'c4': 'choice q1-c4-four', 'level': 20}
+    'level 11':{'c1': 'choice 4-17-one', 'level': 17, 'question': 'question 4-1'},
+    'level 12':{'c2': 'choice 4-18-two', 'level': 18},
+    'level 13':{'c3': 'choice 4-19-three', 'level': 19},
+    'level 14':{'c4': 'choice 4-20-four', 'level': 20}
   },
   {
-    'level 11':{'c1': 'choice q1-c5-one', 'level': 21, 'question': 'question 1-2'},
-    'level 12':{'c2': 'choice q1-c5-two', 'level': 22},
-    'level 13':{'c3': 'choice q1-c5-three', 'level': 23},
-    'level 14':{'c4': 'choice q1-c5-four', 'level': 24}
+    'level 11':{'c1': 'choice 5-21-one', 'level': 21, 'question': 'question 1-2'},
+    'level 12':{'c2': 'choice 5-22-two', 'level': 22},
+    'level 13':{'c3': 'choice 5-23-three', 'level': 23},
+    'level 14':{'c4': 'choice 5-24-four', 'level': 24}
   },
   {
-    'level 11':{'c1': 'choice q1-c6-one', 'level': 25},
-    'level 12':{'c2': 'choice q1-c6-two', 'level': 26},
-    'level 13':{'c3': 'choice q1-c6-three', 'level': 27},
-    'level 14':{'c4': 'choice q1-c6-four', 'level': 28}
+    'level 11':{'c1': 'choice 6-25-one', 'level': 25, 'question': 'question 2-2'},
+    'level 12':{'c2': 'choice 6-26-two', 'level': 26},
+    'level 13':{'c3': 'choice 6-27-three', 'level': 27},
+    'level 14':{'c4': 'choice 6-28-four', 'level': 28}
   },
   {
-    'level 11':{'c1': 'choice q1-c6-one', 'level': 29},
-    'level 12':{'c2': 'choice q1-c6-two', 'level': 30},
-    'level 13':{'c3': 'choice q1-c6-three', 'level': 31},
-    'level 14':{'c4': 'choice q1-c6-four', 'level': 32}
+    'level 11':{'c1': 'choice 7-29-one', 'level': 29, 'question': 'question 3-2'},
+    'level 12':{'c2': 'choice 7-30-two', 'level': 30},
+    'level 13':{'c3': 'choice 7-31-three', 'level': 31},
+    'level 14':{'c4': 'choice 7-32-four', 'level': 32}
+  },
+  {
+    'level 11':{'c1': 'choice 8-33-one', 'level': 33, 'question': 'question 4-2'},
+    'level 12':{'c2': 'choice 8-34-two', 'level': 34},
+    'level 13':{'c3': 'choice 8-35-three', 'level': 35},
+    'level 14':{'c4': 'choice 8-36-four', 'level': 36}
   }
 ];
+
  // function that runs all the questions and choices. -
 let level = 0;
 function theWoodsGame() {
   // variables - buttons 
-
   const btnOne = document.getElementById('btn-one');
   const btnTwo = document.getElementById('btn-two');
   const btnThree = document.getElementById('btn-three');

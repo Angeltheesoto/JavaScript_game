@@ -99,7 +99,6 @@ let newChoices = [
 let level = 0;
 function theWoodsGame() {
   // variables - buttons 
-
   const btnOne = document.getElementById('btn-one');
   const btnTwo = document.getElementById('btn-two');
   const btnThree = document.getElementById('btn-three');
@@ -112,19 +111,24 @@ function theWoodsGame() {
   btnThree.innerHTML = newChoices[0]["level 13"].c3;
   btnFour.innerHTML = newChoices[0]["level 14"].c4;
 
-  function callbackClicked(event, button) {
-    // console.log(event);
+  function callbackClicked(element) {
     // console.log('calling call back clicked for level' + level);
-    // console.log('break');
     let currentNode = newChoices[level];
-    let name = button.getAttribute('data-name');
-    let currentChild = currentNode[name];
-    let childIndex = currentChild['level'];
+    // console.log('break');
+    let currentChild = currentNode['level 11'];
+    let childIndex = currentChild['level']; // HERE
     populateChildren(childIndex);
   }
+  
+  let levels = [
+    newChoices['level 11'],
+    newChoices['level 12'],
+    newChoices['level 13'],
+    newChoices['level 14']
+  ];
 
   function populateChildren(start) {
-    console.log('starting children at index' + start);
+    // console.log('starting children at index' + start);
     question.innerHTML = newChoices[start]['level 11']['question'];
     btnOne.innerHTML = newChoices[start]['level 11']['c1'];
     btnTwo.innerHTML = newChoices[start]['level 12']['c2'];
@@ -132,20 +136,32 @@ function theWoodsGame() {
     btnFour.innerHTML = newChoices[start]['level 14']['c4'];
     level = start;
   }
-//  Event listener.
+//  Event listener. // HERE
+  // btnTwo.addEventListener('click', (event) => {
+  //   callbackClicked(event);
+  // })
+
+  // this loops the buttons for when they are clicked
   let buttons = [
     btnOne,
     btnTwo,
     btnThree,
     btnFour
   ];
-  buttons.forEach((button) => {
-    button.addEventListener('click', (event) => {
+  buttons.forEach((e) => {
+    e.addEventListener('click', (event) => {
       console.log('clicked')
-      callbackClicked(event, button);
+      callbackClicked(event);
     })
   })
+
 };
+
+
+
+
+
+
 
 // MY OLD CODE -
  // // starter dialogue

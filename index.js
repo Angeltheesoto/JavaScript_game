@@ -31,6 +31,7 @@ const noBtn = document.getElementById('btn-no');
         question.innerText = `Good Luck!`;
         setTimeout(() => {
           theWoodsGame();
+          restart();
         }, 2000);
         }, 1000);
       }, 1000);
@@ -42,6 +43,7 @@ noBtn.addEventListener('click', () => {
   question.innerText = `Maybe next time.`;
   noBtn.classList.add('none')
   yesBtn.classList.add('none')
+  restart();
 });
 
  // These are my choices for every question -
@@ -169,10 +171,10 @@ let newChoices = [
     'level 14':{'c4': 'choice 19-80-four', 'level': 80}
   },
   {
-    // 'level 11':{'c1': 'choice 20-81-one', 'level': 81, 'question': 'question 4-5'},
-    // 'level 12':{'c2': 'choice 20-82-two', 'level': 82},
-    // 'level 13':{'c3': 'choice 20-83-three', 'level': 83},
-    // 'level 14':{'c4': 'choice 20-84-four', 'level': 84}
+    'level 11':{'c1': 'choice 20-81-one', 'level': 81, 'question': 'question 4-5'},
+    'level 12':{'c2': 'choice 20-82-two', 'level': 82},
+    'level 13':{'c3': 'choice 20-83-three', 'level': 83},
+    'level 14':{'c4': 'choice 20-84-four', 'level': 84}
   }
 ];
 
@@ -224,6 +226,21 @@ function theWoodsGame() {
     })
   })
 };
+
+// restart function -
+function restart() {
+  const restartBtn = document.getElementById('restart');
+  if(restartBtn.style.display === 'none'){
+    restartBtn.style.display = 'block';
+    restartBtn.addEventListener('click', () => {
+    window.location.reload()
+  });
+  } else {
+    restartBtn.style.display = 'none';
+  }
+}
+restart()
+
 
 // MY OLD CODE -
  // // starter dialogue

@@ -86,6 +86,7 @@ function theWoodsGame() {
     console.log('starting children at index' + start);
     if(newChoices[start]['level 11']['gameOver']=== ''){
       newChoices[start]['level 11']['gameOver'] = gameOver(buttons);
+      endCard.classList.remove('none')
     };
     question.innerHTML = newChoices[start]['level 11']['question'];
     btnOne.innerHTML = newChoices[start]['level 11']['c1'];
@@ -126,9 +127,10 @@ function restart() {
 restart()
 
 // Hide buttons -
+let endCard = document.querySelector('.gameover');
 function gameOver(para) {
   para.forEach((btn) => {
     btn.classList.add('none');
-  })
+  });
 }
 

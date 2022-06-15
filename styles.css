@@ -143,3 +143,13 @@ button:hover {
   width: 4.5rem;
   margin: 0 auto;
 }
+
+/* Game over */
+.gameover {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  font-family: 'Roboto',
+  sans-serif;
+}

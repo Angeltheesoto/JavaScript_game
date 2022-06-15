@@ -20,6 +20,8 @@ const btnContainer = document.querySelector('.btn-container')
 // Introduction to the game.
   yesBtn.addEventListener('click', () => {
   question.innerText = `Your game will begin shortly...`;
+
+
   noBtn.classList.add('none')
   yesBtn.classList.add('none')
     setTimeout(() => {
@@ -49,7 +51,7 @@ noBtn.addEventListener('click', () => {
   restart();
 });
 
-// My choices and questions
+// Importing my choices and questions for the game -
 import {newChoices} from './data.js'; 
 
 // function that runs all the questions and choices. -
@@ -82,6 +84,9 @@ function theWoodsGame() {
   // Assigning each node to the appropriate button.
   function populateChildren(start) {
     console.log('starting children at index' + start);
+    if(newChoices[start]['level 11']['gameOver']=== ''){
+      newChoices[start]['level 11']['gameOver'] = gameOver(buttons);
+    };
     question.innerHTML = newChoices[start]['level 11']['question'];
     btnOne.innerHTML = newChoices[start]['level 11']['c1'];
     btnTwo.innerHTML = newChoices[start]['level 12']['c2'];
@@ -119,3 +124,11 @@ function restart() {
   }
 }
 restart()
+
+// Hide buttons -
+function gameOver(para) {
+  para.forEach((btn) => {
+    btn.classList.add('none');
+  })
+}
+

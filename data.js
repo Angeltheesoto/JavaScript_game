@@ -7,9 +7,9 @@ export let newChoices = [
   */
   // questions Label = 'question [path#-currentQuestion#]' -
   {
-    'level 11': {'c1': 'Be adventurest and go through the rocky river.', 'level': 1, 'question': `You and a friend are on a trip at one of the largest forest in the United States. Your hiking through the mountains of Tongrass National Forest, Alaska. Its been nothing but three fun filled days with hiking, camping and fishing in the great outdoors. You and your best-friend are miles away from any contact with civilization and your both tired and ready to head back home. You have enough supplies to last you at least two more days for the journey back. To head back your best-friend suggest a more adenturest route through the rocky river, pass the abonded yellow bus. There is also another shorter route on the map that a ranger had mentioned to you before the trip called the Moose path. Or also the Cove trail if your not afraid of animals.`},
+    'level 11': {'c1': 'Be adventurest and go through the rocky river.', 'level': 1, 'question': `You and a friend are on a trip at one of the largest forest in the United States. Your hiking through the mountains of Tongrass National Forest, Alaska. Its been nothing but three fun filled days with hiking, camping and fishing in the great outdoors. You and your best-friend are miles away from any contact with civilization and your both tired and ready to head back home. You have enough supplies to last you at least two more days for the journey back. To head back your best-friend suggest a more adventurest route through the rocky river, pass the abonded yellow bus. There is also another shorter route on the map that a ranger had mentioned to you before the trip called the Moose path. Or also the Cove trail if your not afraid of wild animals.`},
     'level 12': {'c2': 'Take the shorter path the ranger had mentioned.', 'level': 2},
-    'level 13': {'c3': 'Wild animals dont scare you, so you go through the Cove trail.', 'level': 3},
+    'level 13': {'c3': 'The wild animals dont scare you, so you go through the Cove trail.', 'level': 3},
     'level 14': {'c4': 'Stay another two days because you dont want to leave just yet.', 'level':4}
   },
   {
@@ -31,7 +31,7 @@ export let newChoices = [
     'level 14':{'c4': 'choice 3-16-four', 'level': 16}
   },
   {
-    'level 11':{'c1': 'choice 4-17-one', 'level': 17, 'question': 'You stayed for too long and now you and your best-friend dont have enough food and water to make it back home. You both try your best to get home but now you dont have enough energy to make it back home.', 'gameOver': ''},
+    'level 11':{'c1': 'choice 4-17-one', 'level': 17, 'question': 'You stayed for too long and now you and your best-friend dont have enough food and water to make it back home. You both try your best to get home but you pass out from lack of energy to make it back.', 'gameOver': ''},
     'level 12':{'c2': 'choice 4-18-two', 'level': 18},
     'level 13':{'c3': 'choice 4-19-three', 'level': 19},
     'level 14':{'c4': 'choice 4-20-four', 'level': 20}

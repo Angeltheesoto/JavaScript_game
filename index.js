@@ -84,8 +84,10 @@ function theWoodsGame() {
   // Assigning each node to the appropriate button.
   function populateChildren(start) {
     console.log('starting children at index' + start);
-    if(newChoices[start]['level 11']['gameOver']=== ''){
+    if(newChoices[start]['level 11']['gameOver'] === ''){
       newChoices[start]['level 11']['gameOver'] = gameOver(buttons);
+    } else if(newChoices[start]['level 11']['survived'] === ''){
+      newChoices[start]['level 11']['survived'] = survive(buttons);
     };
     question.innerHTML = newChoices[start]['level 11']['question'];
     btnOne.innerHTML = newChoices[start]['level 11']['c1'];
@@ -125,17 +127,28 @@ function restart() {
 }
 restart()
 
-// Hide buttons - When you loose the buttons disappear and text shows that you have lost.
+// Hide buttons - When you loose the buttons disappear and text shows that you have lost or won.
 let endCard = document.querySelector('.gameover');
+let survived = document.querySelector('.survived');
+
 function gameOver(para) {
   para.forEach((btn) => {
     btn.classList.add('none');
   });
   endCard.classList.remove('none');
-
   window.setTimeout(function () {
-  endCard.classList.add('animation')
-}, 0);
+    endCard.classList.add('animation')
+  }, 0);
+}
+
+function survive(para) {
+  para.forEach((btn) => {
+    btn.classList.add('none');
+  });
+  survived.classList.remove('none');
+  window.setTimeout(function () {
+    survived.classList.add('animation')
+  }, 0);
 }
 
 

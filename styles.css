@@ -161,6 +161,18 @@ button:hover {
   text-shadow: 9px 9px 5px red;
 }
 
+.survived {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  font-family: 'Roboto',
+    sans-serif;
+  text-shadow: 9px 9px 5px green;
+}
+
+
+
 .animation {
   -webkit-animation: breathing 5s ease-out infinite normal;
   animation: breathing 5s ease-out infinite normal;

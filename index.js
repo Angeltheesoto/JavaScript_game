@@ -86,7 +86,6 @@ function theWoodsGame() {
     console.log('starting children at index' + start);
     if(newChoices[start]['level 11']['gameOver']=== ''){
       newChoices[start]['level 11']['gameOver'] = gameOver(buttons);
-      endCard.classList.remove('none')
     };
     question.innerHTML = newChoices[start]['level 11']['question'];
     btnOne.innerHTML = newChoices[start]['level 11']['c1'];
@@ -126,11 +125,17 @@ function restart() {
 }
 restart()
 
-// Hide buttons -
+// Hide buttons - When you loose the buttons disappear and text shows that you have lost.
 let endCard = document.querySelector('.gameover');
 function gameOver(para) {
   para.forEach((btn) => {
     btn.classList.add('none');
   });
+  endCard.classList.remove('none');
+
+  window.setTimeout(function () {
+  endCard.classList.add('animation')
+}, 0);
 }
+
 

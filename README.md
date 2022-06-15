@@ -6,9 +6,7 @@ How to play -
 
 Thought process before starting the project -
 
-I would like to make a role-playing game where the player will read parts of the story and make decisions along the way similarly to Dungeons & Dragons.
-
-I would like this to be an adventure game where the player is lost in the woods and has to make the right decisions to escape the unknown challenges of the woods.
+- I would like to make a role-playing game where the player will read parts of the story and make decisions along the way similarly to Dungeons & Dragons. I would like this to be an adventure game where the player is lost in the woods and has to make the right decisions to escape the unknown challenges of the woods.
 
 Some things I would like to have in my game -
 

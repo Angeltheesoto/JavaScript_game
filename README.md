@@ -2,7 +2,14 @@
 
 How to play -
 
-- You will be given a starter dialogue and will have to choose between multiple choices on trying to escape the woods alive. Each choice is given a unique story towards your journey home.
+- You will be given a starter dialogue and will have to choose between multiple choices on trying to escape the woods alive. Each choice is given a unique story towards your journey home. You will need a mouse and a screen. For the controls all you need is to point and click on your choices.
+
+Technologies used when developing this game -
+
+- vsCode
+- git, and gitHub
+- HTML, CSS, and JavaScript
+- google Chrome
 
 Thought process before starting the project -
 

@@ -1,7 +1,6 @@
 
 // Toggle background audio
 let audio = document.getElementById('background-audio');
-
 document.getElementById('mute').addEventListener('click', (e) =>
 {
   e = e || window.event;
@@ -10,7 +9,6 @@ document.getElementById('mute').addEventListener('click', (e) =>
 });
 
 // Press yes or no to start the game. If you press yes the game will start and say 'Your journey will begin shortly' have it wait 3 seconds before changing the text. If no the game will say 'Dont worry, theres always next time.'
-
 // Variables
 const question = document.getElementById('question');
 const yesBtn = document.getElementById('btn-yes');
@@ -21,9 +19,9 @@ const btnContainer = document.querySelector('.btn-container')
   yesBtn.addEventListener('click', () => {
   question.innerText = `Your game will begin shortly...`;
 
-
   noBtn.classList.add('none')
   yesBtn.classList.add('none')
+
     setTimeout(() => {
     question.innerText = `In 3..`;
       setTimeout(() => {
@@ -56,7 +54,6 @@ import {newChoices} from './data.js';
 
 // function that runs all the questions and choices. -
 let level = 0;
-
 function theWoodsGame() {
   // variables - 
   const btnOne = document.getElementById('btn-one');
@@ -130,7 +127,6 @@ restart()
 // Hide buttons - When you loose the buttons disappear and text shows that you have lost or won.
 let endCard = document.querySelector('.gameover');
 let survived = document.querySelector('.survived');
-
 function gameOver(para) {
   para.forEach((btn) => {
     btn.classList.add('none');

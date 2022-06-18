@@ -1,9 +1,9 @@
 export let newChoices = [
   /* Choices label = 'choice [index#-level#-button#]' - ex:
-   'level 11': {'c1': 'choice 1-5-one', 'level': 5, 'question': 'question 1-1'},
-   'level 12': {'c2': 'choice 1-6-two', 'level': 6},
-   'level 13': {'c3': 'choice 1-7-three', 'level': 7},
-   'level 14': {'c4': 'choice 1-8-four', 'level': 8}
+    'level 11': {'c1': 'choice 1-5-one', 'level': 5, 'question': 'question 1-1'},
+    'level 12': {'c2': 'choice 1-6-two', 'level': 6},
+    'level 13': {'c3': 'choice 1-7-three', 'level': 7},
+    'level 14': {'c4': 'choice 1-8-four', 'level': 8}
   */
   // questions Label = 'question [path#-currentQuestion#]' -
   {

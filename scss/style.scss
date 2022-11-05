@@ -1,0 +1,60 @@
+// Variables
+$red: red;
+$green: green;
+$blue: blue;
+$black: black;
+$white: white;
+
+$theme-primary: $white;
+$theme-secondary: $black;
+$theme-tertiary: $red;
+
+$font-title: "Amatic SC", cursive;
+$font-text: "Roboto", sans-serif;
+$font-choices: "Shadows Into Light", cursive;
+
+$border: 10px;
+
+// components
+@mixin button-style($color, $border) {
+  margin: 0 1rem 1rem 0;
+  padding: 10px 1rem;
+  border-radius: $border;
+  border: none;
+  &hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 1s ease-in-out;
+  }
+  @content;
+}
+
+@mixin choices-container-style($color, $border) {
+  display: flex;
+  min-width: 50rem;
+  margin: 0 auto;
+  border-radius: $border;
+  max-width: 90%;
+  @content;
+}
+
+@mixin choices-content-style($color, $border) {
+  width: 25%;
+  background-color: var(--primary-color);
+  margin: 10px;
+  padding: 10px;
+  border-radius: $border;
+  word-break: break-all;
+  font-family: $font-choices;
+  color: var(--secondary-color);
+  font-size: 20px;
+  margin-bottom: 3rem;
+  &hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 1s ease-in-out;
+  }
+  @content;
+}

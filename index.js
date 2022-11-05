@@ -49,7 +49,7 @@ noBtn.addEventListener('click', () => {
   restart();
 });
 
-// Importing my choices and questions for the game -
+// Importing my choices and questions for the game - 
 import {newChoices} from './data.js'; 
 
 // function that runs all the questions and choices. -
@@ -102,6 +102,7 @@ function theWoodsGame() {
     btnThree,
     btnFour
   ];
+  
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
       console.log('clicked')

@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="./styles.css">
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto&family=Shadows+Into+Light&display=swap"
-  rel="stylesheet">
- <title>Milestone project 1</title>
-</head>
-<body>
-<div class="opacity"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <title>Milestone project 1</title>
+  </head>
+  <body>
+    <div class="opacity"></div>
 
- <audio id="background-audio" autoplay loop>
-  <source src="./images/nature-sounds.m4a"/>
- </audio>
+    <audio id="background-audio" autoplay loop>
+      <!-- <source src="./images/nature-sounds.m4a"/> -->
+    </audio>
 
- <a href="#" class="toggle" id="mute">Sound</a>
- 
- <h1 class="game-title" id="game-title">Woodlands
-  <hr>
- </h1>
- <!-- Later on make a continue to start button. -->
+    <a href="#" class="toggle" id="mute">Sound</a>
 
- <div class="question-container" id="question-container">
-  <h2 class="question" id="question">Welcome to the Woods, will you survive?</h2>
-  <button class="btn-yes" id="btn-yes">Yes</button>
-  <button class="btn-no" id="btn-no">No</button>
- </div>
+    <h1 class="game-title" id="game-title">
+      Woodlands
+      <hr />
+    </h1>
+    <!-- Later on make a continue to start button. -->
 
- <div class="btn-container" id="btn-container">
-  <div class="btn-one box" id="btn-one" data-name="level 11">Choice..</div>
-  <div class="btn-two box" id="btn-two" data-name="level 12">Choice..</div>
-  <div class="btn-three box" id="btn-three" data-name="level 13">Choice..</div>
-  <div class="btn-four box" id="btn-four" data-name="level 14">Choice..</div>
- </div>
+    <div class="question-container" id="question-container">
+      <h2 class="question" id="question">
+        Welcome to the Woods, will you survive?
+      </h2>
+      <button class="btn-yes" id="btn-yes">Yes</button>
+      <button class="btn-no" id="btn-no">No</button>
+    </div>
 
- <div class="gameover none">Game Over</div>
- <div class="survived none">You Survived</div>
- <div class="restart box" id="restart">restart</div>
+    <div class="btn-container" id="btn-container">
+      <div class="btn-one box" id="btn-one" data-name="level 11">Choice..</div>
+      <div class="btn-two box" id="btn-two" data-name="level 12">Choice..</div>
+      <div class="btn-three box" id="btn-three" data-name="level 13">
+        Choice..
+      </div>
+      <div class="btn-four box" id="btn-four" data-name="level 14">
+        Choice..
+      </div>
+    </div>
 
- <!-- JavaScript -->
- <script src="./index.js" type="module"></script>
-</body>
+    <div class="gameover none">Game Over</div>
+    <div class="survived none">You Survived</div>
+    <div class="restart box" id="restart">restart</div>
+
+    <!-- JavaScript -->
+    <script src="./index.js" type="module"></script>
+  </body>
 </html>

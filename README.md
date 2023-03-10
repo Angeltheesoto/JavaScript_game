@@ -4,7 +4,7 @@ Woodlands is a solo interactive fiction game I created using only HTML5, CSS3 an
 
 ![angeltheesoto](./images//jsGame.png)
 
-Website URL: [https://angeltheesoto.github.io/Milestone-project-1/](https://angeltheesoto.github.io/Milestone-project-1/)
+Website URL: [https://angeltheesoto.github.io/JavaScript_game/](https://angeltheesoto.github.io/JavaScript_game/)
 
 ## How To
 
